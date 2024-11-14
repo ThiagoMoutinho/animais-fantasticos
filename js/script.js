@@ -1,5 +1,4 @@
 import ScrollSuave from "./modules/scroll-suave.js";
-import initScrollAnimacao from "./modules/scroll-animacao.js";
 import accordion from "./modules/accordion.js";
 import initTabNav from "./modules/tabnav.js";
 import initModal from "./modules/modal.js";
@@ -8,12 +7,12 @@ import initDropdowMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
 import initFetchAnimais from "./modules/fetch-animais.js"
+import iniAnimacaoScroll from "./modules/scroll-animacao.js";
 
 const scollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]')
 scollSuave.init()
 
 
-initScrollAnimacao()
 accordion()
 initTabNav()
 initModal()
@@ -22,3 +21,4 @@ initDropdowMenu()
 initMenuMobile()
 initFuncionamento()
 initFetchAnimais()
+iniAnimacaoScroll()
