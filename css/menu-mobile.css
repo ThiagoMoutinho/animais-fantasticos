@@ -1,0 +1,84 @@
+[data-menu="button"] {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	[data-menu="button"] {
+		display: flex;
+		background: #202024;
+		border: none;
+		padding: 1rem 1.2rem;
+		border-radius: 4px;
+		text-transform: uppercase;
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: bold;
+		color: #fff;
+		cursor: pointer;
+		margin: 10px;
+		justify-content: center;
+		position: relative;
+		z-index: 200;
+	}
+
+	[data-menu="button"]::before,
+	[data-menu="button"]::after {
+		content: '';
+		display: inline-block;
+		margin-top: 10px;
+		position: absolute;
+		height: 2px;
+		width: 20px;
+		background: #ffffff;
+		transition: transform 0.3s, top 0.3s;
+		border-radius: 5px;
+	}
+
+	/* Posiciona os traços para o ícone de hambúrguer */
+	[data-menu="button"]::before {
+		top: 6px; /* Traço superior */
+		box-shadow: 0 6px #ffffff, 0 -6px #ffffff;
+	}
+
+	[data-menu="button"]::after {
+		top: 6px; /* Traço inferior */
+	}
+
+	/* Transforma em "X" quando ativo */
+	[data-menu="button"].active::before {
+		transform: rotate(45deg);
+		top: 5px;
+		box-shadow: none;
+	}
+
+	[data-menu="button"].active::after {
+		transform: rotate(-45deg);
+		top: 5px;
+	}
+
+	#menu {
+		display:none;
+		margin-top: .5rem;
+		margin-left: .6rem;
+		position: absolute;
+		background: #FFBB55;
+		width: 195px;
+		z-index: 99;
+		border-radius: 5px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		border: 1px solid #a27020;
+	}
+
+	#menu.active {
+		display: block;
+		animation: show-right .3s forwards;
+	}
+
+	.dropdown-menu {
+		position: static;
+		border: 2px solid transparent;
+	}
+
+	.dropdown-menu::before {
+		border-bottom: 15px solid #EE5544;
+	}
+}

@@ -1,0 +1,7 @@
+node_modules
+.idea
+main.js.LICENSE.txt
+main.js
+package-lock.json
+webpack.config.js
+eslint.config.mjs
