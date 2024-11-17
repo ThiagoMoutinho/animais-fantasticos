@@ -3,11 +3,12 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
+import fetchAnimais from "./modules/fetch-animais.js"
 import initDropdowMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
-import initFetchAnimais from "./modules/fetch-animais.js"
 import iniAnimacaoScroll from "./modules/scroll-animacao.js";
+
 
 
 const scrollSuave = new ScrollSuave('.js-menu a[href^="#"]')
@@ -28,5 +29,8 @@ tooltip.init()
 initDropdowMenu()
 initMenuMobile()
 initFuncionamento()
-initFetchAnimais()
 iniAnimacaoScroll()
+
+fetchAnimais('../animaisapi.json', '.numeros-grid')
+
+
