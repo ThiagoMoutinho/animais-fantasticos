@@ -23,7 +23,7 @@ export default function fetchAnimais(url, target) {
 
             //Após a tranformação de json, ativa as funções para preencher a anima os números.
             animaisJson.forEach(animal => preencherAnimais(animal))
-            AnimaNumeros
+            AnimaNumeros()
         } catch (err) {
             console.log(err)
         }
