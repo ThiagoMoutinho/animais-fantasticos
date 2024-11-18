@@ -7,7 +7,7 @@ import fetchAnimais from "./modules/fetch-animais.js"
 import initDropdowMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
-import iniAnimacaoScroll from "./modules/scroll-animacao.js";
+import ScrollAnima from "./modules/scroll-anima.js";
 
 
 
@@ -26,10 +26,12 @@ modal.init()
 const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
 
+const scrollAnima = new ScrollAnima('.js-scroll')
+scrollAnima.init()
+
 initDropdowMenu()
 initMenuMobile()
 initFuncionamento()
-iniAnimacaoScroll()
 
 fetchAnimais('../animaisapi.json', '.numeros-grid')
 
