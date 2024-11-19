@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import fetchAnimais from "./modules/fetch-animais.js"
 import DropdowMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js"
-import initFuncionamento from "./modules/funcionamento.js"
+import Funcionamento from "./modules/funcionamento.js"
 import ScrollAnima from "./modules/scroll-anima.js";
 
 
@@ -33,7 +33,8 @@ const dropdownMenu = new DropdowMenu('[data-dropdown]')
 dropdownMenu.init()
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]')
 menuMobile.init()
-initFuncionamento()
+const funcionamento = new Funcionamento('[data-semana]', 'aberto')
+funcionamento.init()
 
 fetchAnimais('../animaisapi.json', '.numeros-grid')
 
